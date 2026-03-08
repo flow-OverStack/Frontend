@@ -10,6 +10,23 @@
   grid-row: 2 / 3;
   position: sticky;
   bottom: 0;
+
+  @media (max-width: 900px) {
+    flex-direction: row;
+    position: relative;
+    padding: 60px 20px 60px;
+    max-width: 700px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    background-color: transparent;
+    justify-content: flex-start;
+    border: none;
+    flex-direction: column;
+    padding: 0 10px;
+  }
 }
 
 .aside__button {
@@ -20,6 +37,25 @@
   padding: 16px;
   width: 100%;
   transition: background-color 0.3s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 900px) {
+    width: 150px;
+    padding: 8px;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 767px) {
+    position: static;
+    width: 100%;
+    height: 52px;
+    transform: translateX(0);
+  }
 }
 
 .aside__button:hover {
@@ -32,10 +68,43 @@
   background-color: #0f1a2e;
   border: 1px solid #1e293b;
   padding: 16px 20px;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.aside__themes {
+  grid-column: 1 / 2;
+}
+
+.aside__sort {
+  grid-column: 2 / 3;
 }
 
 .aside__tags {
-  padding: 16px 20px 20px 20px;
+  padding: 16px 0 20px 20px;
+  max-width: 300px;
+  width: 100%;
+
+  @media (max-width: 767px) {
+    max-width: auto;
+    width: auto;
+    grid-column: 1 / -1;
+  }
+}
+
+.aside__mobale {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: flex;
+    background-color: #0f1a2e;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    justify-content: center;
+    padding: 10px;
+  }
 }
 
 .aside__themes-name,
@@ -43,11 +112,11 @@
 .aside__tags-name {
   color: #e2e8f0;
   font-size: 14px;
+  margin: 0 0 20px;
 }
 
 .aside__themes-list,
 .aside__sort-list {
-  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
@@ -55,8 +124,14 @@
   gap: 10px;
 }
 
+.aside__mobale-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 26px;
+}
+
 .aside__tags-list {
-  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
@@ -64,6 +139,7 @@
   flex-wrap: wrap;
 }
 
+.aside__mobale-button,
 .aside__themes-button,
 .aside__sort-button {
   color: #94a3b8;
@@ -74,9 +150,10 @@
   transition: color 0.3s linear;
 }
 
+.aside__mobale-button:hover,
 .aside__themes-button:hover,
 .aside__sort-button:hover {
-    color: #FACC15;
+  color: #facc15;
 }
 
 .aside__tags-button {
@@ -86,10 +163,12 @@
   padding: 7px 13px;
   border: none;
   border-radius: 8px;
-  transition: color 0.3s linear, background-color 0.3s linear;
+  transition:
+    color 0.3s linear,
+    background-color 0.3s linear;
 }
 
 .aside__tags-button:hover {
-    background-color: #d1ab11;
-    color: #ffffff;
+  background-color: #d1ab11;
+  color: #ffffff;
 }

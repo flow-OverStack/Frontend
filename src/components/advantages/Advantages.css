@@ -4,8 +4,6 @@
   align-items: center;
   justify-content: center;
   gap: 40px;
-  padding: 80px 0;
-  background-color: #0b0f1a;
 }
 
 .advantages__title {
@@ -19,7 +17,6 @@
 }
 
 .advantages__list {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -32,7 +29,7 @@
   border: 1px solid #1da1ff;
   border-radius: 16px;
   padding: 60px 20px;
-  background-color: #111827;
+  background-color: rgb(17, 24, 39, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,9 +40,9 @@
 
   @media (max-width: 650px) {
     width: 200px;
-    height: 200px;
-    min-width: 200px;
-    min-height: 200px;
+    min-width: auto;
+    min-height: auto;
+    padding: 30px 10px;
   }
 }
 
@@ -57,6 +54,11 @@
   color: #ffd400;
   width: 64px;
   height: 64px;
+
+  @media (max-width: 650px) {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .advantages__card-title {
@@ -66,6 +68,7 @@
 
   @media (max-width: 650px) {
     font-size: 17px;
+    text-align: center;
   }
 }
 

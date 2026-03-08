@@ -1,25 +1,25 @@
 .question {
-  background-color: #0b1220;
   padding: 160px 0 80px;
 }
 
-.question__container {
-  padding: 20px 0;
+.question__wrap {
+  padding: 20px 15px 20px 15px;
   background-color: #111827;
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
   border: 1.5px solid #1f2937;
   border-radius: 16px;
+  max-width: 700px;
 }
 
 .question__title {
   color: #facc15;
   font-size: 42px;
   line-height: 100%;
-  margin: 0;
   text-align: center;
   margin: 0 0 20px;
+
+  @media (max-width: 767px) {
+    font-size: 32px;
+  }
 }
 
 .question__description {
@@ -27,37 +27,61 @@
   text-align: center;
   color: #9ca3af;
   margin: 0 0 30px;
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
 }
 
 .question__form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
+
+  @media (max-width: 767px) {
+    align-items: center;
+  }
 }
 
 .question__form-wrapper {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 .question__form-label {
   font-size: 16px;
   color: #d1d5db;
+
+  @media (max-width: 830px) {
+    width: 300px;
+    align-self: center;
+  }
 }
 
 .question__form-input {
   height: 53px;
   padding-left: 20px;
   width: 640px;
+  color: #ffffff;
+
+  @media (max-width: 830px) {
+    width: 300px;
+    align-self: center;
+  }
 }
 
 .question__form-textarea {
   resize: none;
   height: 130px;
   padding: 20px;
-  width: 620px;
+  width: 640px;
+  color: #ffffff;
+
+  @media (max-width: 830px) {
+    width: 300px;
+    align-self: center;
+  }
 }
 
 .question__form-input,
@@ -76,7 +100,7 @@
 .question__form-buttons {
   display: flex;
   justify-content: space-between;
-  width: 664px;
+  width: 100%;
 }
 
 .question__form-submit,
@@ -89,6 +113,11 @@
   font-size: 16px;
   transition: border-color 0.3s linear;
   font-weight: 700;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }
 
 .question__form-submit:hover,

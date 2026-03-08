@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom"
 import "./Aside.css"
 
 const Aside = () => {
     return (
         <aside className='aside'>
-            <button className="aside__button">+ Задать вопрос</button>
+            <Link to="/question" className="aside__button">+ Задать вопрос</Link>
             <div className="aside__themes">
                 <h3 className="aside__themes-name">Все темы</h3>
                 <ul className="aside__themes-list">
@@ -63,6 +64,34 @@ const Aside = () => {
                     </li>
                     <li className="aside__tags-item">
                         <button className="aside__tags-button">Adaptive</button>
+                    </li>
+                    <li className="aside__tags-item">
+                        <button className="aside__tags-button">HTML</button>
+                    </li>
+                    <li className="aside__tags-item">
+                        <button className="aside__tags-button">CSS</button>
+                    </li>
+                    <li className="aside__tags-item">
+                        <button className="aside__tags-button">Flexbox</button>
+                    </li>
+                    <li className="aside__tags-item">
+                        <button className="aside__tags-button">Grid</button>
+                    </li>
+                    <li className="aside__tags-item">
+                        <button className="aside__tags-button">Adaptive</button>
+                    </li>
+                </ul>
+            </div>
+            <div className="aside__mobale">
+                <ul className="aside__mobale-list">
+                    <li className="aside__mobale-item">
+                        <button className="aside__mobale-button">Популярные</button>
+                    </li>
+                    <li className="aside__mobale-item">
+                        <button className="aside__mobale-button">Новые</button>
+                    </li>
+                    <li className="aside__mobale-item">
+                        <button className="aside__mobale-button">Без ответов</button>
                     </li>
                 </ul>
             </div>

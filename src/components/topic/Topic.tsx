@@ -14,12 +14,18 @@ const Topic = () => {
             <li className="topic__item">
               <div className="topic__card">
                 <div className="topic__card-left">
-                  <span className='topic__card-number'>12</span>
-                  <span className='topic__card-description'>Голосов</span>
-                  <span className='topic__card-number topic__card-number--answer'>4</span>
-                  <span className='topic__card-description'>Ответов</span>
-                  <span className='topic__card-number topic__card-number--view'>120</span>
-                  <span className='topic__card-description'>Просмотров</span>
+                  <div className="topic__card-data">
+                    <span className='topic__card-number'>12</span>
+                    <span className='topic__card-description'>Голосов</span>
+                  </div>
+                  <div className="topic__card-data">
+                    <span className='topic__card-number topic__card-number--answer'>4</span>
+                    <span className='topic__card-description'>Ответов</span>
+                  </div>
+                  <div className="topic__card-data">
+                    <span className='topic__card-number topic__card-number--view'>120</span>
+                    <span className='topic__card-description'>Просмотров</span>
+                  </div>
                 </div>
                 <div className="topic__card-right">
                   <h2 className="topic__card-theme">Как правильно центрировать блок через Flexbox?</h2>
@@ -34,12 +40,18 @@ const Topic = () => {
             <li className="topic__item">
               <div className="topic__card">
                 <div className="topic__card-left">
-                  <span className='topic__card-number'>12</span>
-                  <span className='topic__card-description'>Голосов</span>
-                  <span className='topic__card-number topic__card-number--answer'>4</span>
-                  <span className='topic__card-description'>Ответов</span>
-                  <span className='topic__card-number topic__card-number--view'>120</span>
-                  <span className='topic__card-description'>Просмотров</span>
+                  <div className="topic__card-data">
+                    <span className='topic__card-number'>12</span>
+                    <span className='topic__card-description'>Голосов</span>
+                  </div>
+                  <div className="topic__card-data">
+                    <span className='topic__card-number topic__card-number--answer'>4</span>
+                    <span className='topic__card-description'>Ответов</span>
+                  </div>
+                  <div className="topic__card-data">
+                    <span className='topic__card-number topic__card-number--view'>120</span>
+                    <span className='topic__card-description'>Просмотров</span>
+                  </div>
                 </div>
                 <div className="topic__card-right">
                   <h2 className="topic__card-theme">Как правильно центрировать блок через Flexbox?</h2>
@@ -54,12 +66,18 @@ const Topic = () => {
             <li className="topic__item">
               <div className="topic__card">
                 <div className="topic__card-left">
-                  <span className='topic__card-number'>12</span>
-                  <span className='topic__card-description'>Голосов</span>
-                  <span className='topic__card-number topic__card-number--answer'>4</span>
-                  <span className='topic__card-description'>Ответов</span>
-                  <span className='topic__card-number topic__card-number--view'>120</span>
-                  <span className='topic__card-description'>Просмотров</span>
+                  <div className="topic__card-data">
+                    <span className='topic__card-number'>12</span>
+                    <span className='topic__card-description'>Голосов</span>
+                  </div>
+                  <div className="topic__card-data">
+                    <span className='topic__card-number topic__card-number--answer'>4</span>
+                    <span className='topic__card-description'>Ответов</span>
+                  </div>
+                  <div className="topic__card-data">
+                    <span className='topic__card-number topic__card-number--view'>120</span>
+                    <span className='topic__card-description'>Просмотров</span>
+                  </div>
                 </div>
                 <div className="topic__card-right">
                   <h2 className="topic__card-theme">Как правильно центрировать блок через Flexbox?</h2>
