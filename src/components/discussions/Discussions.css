@@ -38,6 +38,7 @@
   box-shadow: 0px 0px 11px 12px rgba(29, 161, 255, 0);
 }
 
+.discussions__card:focus-visible,
 .discussions__card:hover {
   border-color: rgb(29, 161, 255, 1);
   box-shadow: 0px 0px 11px 12px rgba(29, 161, 255, 0.5);
@@ -69,6 +70,7 @@
   transition: color 0.3s ease-in;
 }
 
+.discussions__card-tag:focus-visible,
 .discussions__card-tag:hover {
   color: #ffd400;
 }

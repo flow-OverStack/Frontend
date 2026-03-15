@@ -58,6 +58,7 @@
   }
 }
 
+.aside__button:focus-visible,
 .aside__button:hover {
   background-color: #1849b3;
 }
@@ -150,6 +151,9 @@
   transition: color 0.3s linear;
 }
 
+.aside__sort-button:focus-visible,
+.aside__mobale-button:focus-visible,
+.aside__themes-button:focus-visible,
 .aside__mobale-button:hover,
 .aside__themes-button:hover,
 .aside__sort-button:hover {
@@ -168,6 +172,7 @@
     background-color 0.3s linear;
 }
 
+.aside__tags-button:focus-visible,
 .aside__tags-button:hover {
   background-color: #d1ab11;
   color: #ffffff;

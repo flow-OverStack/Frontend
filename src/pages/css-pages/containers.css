@@ -23,3 +23,12 @@
   display: flex;
   justify-content: center;
 }
+
+.authorization-container {
+  padding: 120px 0 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}

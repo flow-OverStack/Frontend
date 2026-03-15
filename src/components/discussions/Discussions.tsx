@@ -17,7 +17,7 @@ const Discussions = () => {
                   <span>TypeScript</span>
                 </li>
                 <li className="discussions__card-tag">
-                  <span># SCSS</span>
+                  <span>SCSS</span>
                 </li>
               </ul>
             </div>

@@ -66,6 +66,7 @@
   animation: button 0.6s ease-in forwards;
 }
 
+.hero__button:focus-visible,
 .hero__button:hover {
   box-shadow: 0px 0px 11px 12px rgba(29, 161, 255, 0.5);
 }

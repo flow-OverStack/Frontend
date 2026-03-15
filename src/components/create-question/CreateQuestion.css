@@ -92,6 +92,8 @@
   transition: border-color 0.3s linear;
 }
 
+.question__form-input:focus-visible,
+.question__form-textarea:focus-visible,
 .question__form-input:hover,
 .question__form-textarea:hover {
   border-color: #2563eb;
@@ -120,6 +122,8 @@
   }
 }
 
+.question__form-submit:focus-visible,
+.question__form-cancel:focus-visible,
 .question__form-submit:hover,
 .question__form-cancel:hover {
   border-color: #2563eb;

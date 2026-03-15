@@ -1,0 +1,115 @@
+.registration {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-image: linear-gradient(#08142b, #0b1f45);
+  border-radius: 8px;
+  border: 1px solid rgb(29, 161, 255, 1);
+  box-shadow: 0px 0px 15px 2px rgba(0, 144, 255, 0.5) inset;
+}
+
+.registration__title {
+  text-align: center;
+  color: #facc15;
+  font-size: 34px;
+  margin: 0 0 10px;
+}
+
+.registration__description {
+  color: #94a3b8;
+  font-size: 18px;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.registration__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.registration__form-bio {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+
+
+#nickname-icon {
+  width: 20px;
+  height: 20px;
+  color: #facc15;
+}
+
+.registration__form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.registration__form-link {
+  color: #38bdf8;
+  font-size: 14px;
+  transition: color 0.3s linear;
+}
+
+.registration__form-link:focus-visible,
+.registration__form-link:hover {
+  color: #25799e;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.custom-checkbox__field {
+  background-color: transparent;
+  outline: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #38bdf8;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.3s linear;
+}
+
+.custom-checkbox__field:focus-visible,
+.custom-checkbox__field:hover {
+  border-color: rgb(255, 255, 255);
+}
+
+.custom-checkbox__field:checked::after {
+  content: "✓";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  color: #ffffff;
+  top: -2px;
+  left: 3px;
+}
+
+.custom-checkbox__label {
+  color: #cbd5f5;
+  font-size: 13px;
+}
+
+.registration__form-submit {
+  background-color: #3fb6ff;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  position: relative;
+  transition: background-color 0.3s linear;
+}
+
+.registration__form-submit:focus-visible,
+.registration__form-submit:hover {
+  background-color: rgb(48, 128, 178);
+}

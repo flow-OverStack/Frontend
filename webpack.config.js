@@ -63,8 +63,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: "Forum",
             template: "./src/index.html",
+            favicon: "./src/assets/favicon.png"
         }),
         new MiniCssExtractPlugin({
             filename: production ? '[name].[contenthash].css' : '[name].css',
@@ -73,6 +73,7 @@ module.exports = {
     devServer: {
         port: 3001,
         hot: true,
+        historyApiFallback: true, 
     },
     mode: production ? 'production' : 'development'
 };

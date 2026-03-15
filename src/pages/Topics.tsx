@@ -1,5 +1,5 @@
 import Topic from "../components/topic/Topic"
-import "./containers.css"
+import "./css-pages/containers.css"
 
 const Topics = () => {
     return (

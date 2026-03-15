@@ -6,9 +6,15 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-image: url(./assets/hero-background.png);
+  background-image: url(./assets/hero-background.webp);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+      min-height: 100vh;
 }
 
 a {
@@ -35,6 +41,9 @@ html {
 
 main {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 img {

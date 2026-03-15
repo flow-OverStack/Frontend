@@ -39,8 +39,8 @@ const Header = () => {
         </ul>
       </nav>
       <div className="header__buttons">
-        <button className="header__buttons-up">Вход</button>
-        <button className="header__buttons-in">Регистрация</button>
+        <Link to={"/authorization"} className="header__buttons-up">Вход</Link>
+        <Link to={"/registration"} className="header__buttons-in">Регистрация</Link>
       </div>
       <button className={burger} onClick={openAndCloseNav} aria-label='Открыть бургерное меню' title='Открыть меню'>
         <Burger className="header__burger-icon" />

@@ -71,6 +71,7 @@
   color: #ffd400;
 }
 
+.header__nav-link:focus-visible,
 .header__nav-link:hover {
   color: #ffd400;
 }
@@ -103,6 +104,8 @@
     background-color 0.3s linear;
 }
 
+.header__buttons-up:focus-visible,
+.header__buttons-in:focus-visible,
 .header__buttons-up:hover,
 .header__buttons-in:hover {
   background-color: #1da1ff;
