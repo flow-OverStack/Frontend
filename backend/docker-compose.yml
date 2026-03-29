@@ -1,0 +1,83 @@
+﻿services:
+  user-service:
+    image: maratkk/flow-overstack_user-service:latest
+    container_name: user-service
+    depends_on:
+      - postgres-db
+      - logstash
+    ports:
+      - "8085:8080"
+      - "8086:8081"
+    networks:
+      - user-service-network
+      - flow-overstack_common
+    environment:
+      ConnectionStrings__PostgresSQL: Server=postgres-db;Port=5432;Database=user-service-db;User Id=postgres; Password=${USERS_DB_PASSWORD}
+      Serilog__WriteTo__2__Args__requestUri: http://logstash:8080
+      KeycloakSettings__Host: http://keycloak:8080
+      KeycloakSettings__AdminToken: ${KC_ADMIN_TOKEN}
+      AppStartupSettings__Ports__GrpcPort: 8081
+      AppStartupSettings__Ports__RestApiPort: 8080
+      AppStartupSettings__Ports__UseHttpsForRestApi: false
+      AppStartupSettings__TelemetrySettings__AspireDashboardUrl: http://aspire-dashboard:18889
+      AppStartupSettings__TelemetrySettings__JaegerUrl: http://jaeger:4317
+      AppStartupSettings__TelemetrySettings__ElasticSearchUrl: http://elasticsearch:9200
+      AppStartupSettings__TelemetrySettings__LogstashUrl: http://logstash:8080
+      AppStartupSettings__TelemetrySettings__PrometheusUrl: http://prometheus:9090
+      AppStartupSettings__TelemetrySettings__AspireDashboardHealthCheckUrl: http://aspire-dashboard:18888
+      AppStartupSettings__TelemetrySettings__JaegerHealthCheckUrl: http://jaeger:16686
+      KafkaSettings__Host: broker:29092
+      RedisSettings__Host: redis
+      RedisSettings__Port: 6379
+      RedisSettings__Password: ${REDIS_PASSWORD}
+      RedisSettings__TimeToLiveInSeconds: 300
+      AppStartupSettings__CorsAllowedOrigins__0: http://localhost:3001
+  
+  postgres-db:
+    image: postgres:17
+    container_name: postgres-user-db
+    ports:
+      - "5433:5432"
+    networks:
+      - pg-network
+      - user-service-network
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${USERS_DB_PASSWORD}
+      POSTGRES_DB: user-service-db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  
+  logstash:
+    container_name: logstash-user-service
+    image: logstash:8.15.0
+    ports:
+      - "5046:5046"
+      - "8000:8080"
+    volumes:
+      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    networks:
+      - user-service-network
+      - flow-overstack_common
+  
+  redis:
+    image: redis:latest
+    container_name: redis-user-service
+    networks:
+      - user-service-network
+    ports:
+      - "6379:6379"
+    command: [ "redis-server", "--requirepass", "${REDIS_PASSWORD}" ]
+    volumes:
+      - redis_data:/data
+
+
+networks:
+  pg-network:
+    external: true
+  user-service-network:
+  flow-overstack_common:
+    external: true
+volumes:
+  postgres_data:
+  redis_data:

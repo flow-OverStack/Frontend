@@ -1,0 +1,27 @@
+.modal-error {
+  position: fixed;
+  right: 20px;
+  bottom: 71px;
+  min-width: 100px;
+  min-height: 50px;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.modal-error__close {
+  background-color: transparent;
+  border: none;
+}
+
+.modal-error__close-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.modal-error__text {
+  color: white;
+  font-size: 18px;
+}
